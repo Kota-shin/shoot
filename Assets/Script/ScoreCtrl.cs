@@ -21,7 +21,7 @@ public class ScoreCtrl : MonoBehaviour
         
     }
 
-    public void AddScore()
+    public void AddScore()      //スコアの加算
     {
         this.score += 10;
         this.textComponent.text = "Score" + score.ToString();

@@ -24,7 +24,7 @@ public class GManager : MonoBehaviour
     void Update()
     {
         timeElapsed += Time.deltaTime;
-        if(timeElapsed >= interval && isGameOver == false)
+        if(timeElapsed >= interval && isGameOver == false)  //敵がランダムの位置に配置
         {
             timeElapsed = 0.0f;
             Vector3 randamPos = new Vector3(11, Random.Range(3.7f, -3.7f), 0);
@@ -32,13 +32,12 @@ public class GManager : MonoBehaviour
         }
     }
 
-    public void GameOver()
+    public void GameOver()      //GameOverテキストの表示
     {
-        //GameOverテキストの表示
+        
         this.gameOver.SetActive(true);
         this.isGameOver = true; ;
         this.retry.SetActive(true);
-       // this.
     }
 
 }

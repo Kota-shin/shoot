@@ -53,7 +53,7 @@ public class rokCtrl : MonoBehaviour
         }
     }
 
-    void Bullet()
+    void Bullet()   //弾の発射呼び出し
     {
         if (Input.GetKeyDown("space"))
         {

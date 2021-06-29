@@ -13,9 +13,9 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0.3f, 0, 0);
+        transform.Translate(0.3f, 0, 0);   //弾の移動速度
 
-        if (transform.position.x > 10.0f)
+        if (transform.position.x > 10.0f)  //弾の破棄
         {
             Destroy(gameObject);
         }
@@ -24,8 +24,8 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         Destroy(col.gameObject);
-        Destroy(this.gameObject);
-        GameObject.Find("Canvas").GetComponent<ScoreCtrl>().AddScore();
+        Destroy(this.gameObject);               
+        GameObject.Find("Canvas").GetComponent<ScoreCtrl>().AddScore();   //スコア加算
     }
 
 }
